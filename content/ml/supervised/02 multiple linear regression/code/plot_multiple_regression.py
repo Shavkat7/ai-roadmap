@@ -5,7 +5,8 @@ import pandas as pd
 from pathlib import Path
 
 folder = Path(__file__).resolve().parent
-df = pd.read_csv(folder/'salary.csv', usecols=['Age', 'Years of Experience', 'Salary'])
+# df = pd.read_csv(folder/'salary.csv', usecols=['Age', 'Years of Experience', 'Salary'])
+df = pd.read_csv(r"D:\airepos\forked_ai_roadmap\ai-roadmap\content\ml\supervised\01 simple linear regression\code\salary.csv", usecols=['Age', 'Years of Experience', 'Salary'])
 df.dropna(inplace=True)
 df = df.head(500)
 X = df.drop('Salary', axis=1).to_numpy()
